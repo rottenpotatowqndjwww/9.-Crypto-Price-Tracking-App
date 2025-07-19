@@ -1,0 +1,276 @@
+/* Main container for the whole page */
+.home {
+    padding: 0px 20px;
+    padding-bottom: 100px;
+    background-color: #0f0f1a;
+    color: white;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Hero section - top part with title and search */
+.hero {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 80px 0 60px 0;
+}
+
+/* Main title styling */
+.hero h1 {
+    font-size: max(4vw, 36px);
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Description paragraph */
+.hero p {
+    width: 75%;
+    color: #dce2e2;
+    line-height: 1.5;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Search form container */
+.hero form {
+    padding: 8px;
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Search input field */
+.hero form input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #333;
+    background: transparent;
+}
+
+/* Input placeholder text */
+.hero form input::placeholder {
+    color: #888;
+}
+
+/* Search button */
+.hero form button {
+    border: none;
+    background: #271d54;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.hero form button:hover {
+    background: #3730a3;
+}
+
+/* Crypto table container */
+.crypto-table {
+    max-width: 900px;
+    margin: 50px auto 0;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(45, 27, 105, 0.6), rgba(26, 32, 44, 0.8));
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Table header row */
+.crypto-table .table-layout {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1.2fr 2fr 1.5fr;
+    padding: 20px 25px;
+    align-items: center;
+    border-bottom: 1px solid #3b3b5c;
+}
+
+/* Header row styling */
+.crypto-table .table-layout:first-child {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Header paragraph elements */
+.crypto-table .table-layout:first-child p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Data rows */
+.crypto-table .table-layout:not(:first-child) {
+    transition: background-color 0.3s ease;
+}
+
+.crypto-table .table-layout:not(:first-child):hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Data row paragraph elements */
+.crypto-table .table-layout:not(:first-child) p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+/* Coin info container (image + name) */
+.crypto-table .table-layout div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Coin image styling */
+.crypto-table .table-layout div img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Coin name and symbol */
+.crypto-table .table-layout div p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* Market cap column alignment */
+.crypto-table .table-layout .market-cap {
+    text-align: right;
+}
+
+/* Price change percentage styling */
+.positive-change {
+    color: #10b981 !important;
+    font-weight: 600 !important;
+}
+
+.negative-change {
+    color: #ef4444 !important;
+    font-weight: 600 !important;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+    .home {
+        padding: 0px 15px;
+        padding-bottom: 80px;
+    }
+    
+    .hero {
+        padding: 60px 0 50px 0;
+        gap: 25px;
+    }
+    
+    .hero h1 {
+        font-size: max(6vw, 30px);
+    }
+    
+    .hero p {
+        width: 85%;
+        font-size: 16px;
+    }
+    
+    .hero form {
+        width: 95%;
+        font-size: 18px;
+        padding: 6px;
+    }
+    
+    .hero form input {
+        font-size: 18px;
+        padding-left: 12px;
+    }
+    
+    .hero form button {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+    
+    .crypto-table {
+        margin: 40px auto 0;
+    }
+    
+    .crypto-table .table-layout {
+        grid-template-columns: 0.4fr 1.8fr 1fr 1.8fr 1.2fr;
+        padding: 18px 20px;
+    }
+    
+    .crypto-table .table-layout p {
+        font-size: 14px;
+    }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
+    .home {
+        padding: 0px 10px;
+    }
+    
+    .hero {
+        padding: 50px 0 40px 0;
+        gap: 20px;
+    }
+    
+    .hero h1 {
+        font-size: max(8vw, 26px);
+    }
+    
+    .hero p {
+        width: 95%;
+        font-size: 15px;
+    }
+    
+    .hero form {
+        width: 100%;
+        font-size: 16px;
+        padding: 5px;
+    }
+    
+    .hero form input {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    
+    .hero form button {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+    
+    .crypto-table .table-layout {
+        grid-template-columns: 0.3fr 1.5fr 0.9fr 1.5fr 1fr;
+        padding: 15px 15px;
+    }
+    
+    .crypto-table .table-layout p {
+        font-size: 12px;
+    }
+}
